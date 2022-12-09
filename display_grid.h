@@ -37,9 +37,8 @@ void displayGrid(sf::RenderWindow& window, const sf::Text& textSpeed, const sf::
                 for (int i = -1; i < 2; i++)
                     for (int j = -1; j < 2; j++)
                     {
-                        /// \ref wrapValue() \copybrief
+                        /// \ref wrapValue() \copybrief wrapValue()
                         int xi = wrapValue(x + i, GRID_WIDTH);
-                        /// \ref wrapValue() \copybrief
                         int yj = wrapValue(y + j, GRID_HEIGHT);
                         neighborSum += grid[xi + yj * GRID_WIDTH];
                     }

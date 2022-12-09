@@ -33,41 +33,41 @@
 \DoxyCodeLine{38                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = -\/1; j < 2; j++)}
 \DoxyCodeLine{39                     \{}
 \DoxyCodeLine{41                         \textcolor{keywordtype}{int} xi = \mbox{\hyperlink{preparation__parameters_8h_a96f1c9f2e658ba8f28c1834311a16ff0}{wrapValue}}(x + i, \mbox{\hyperlink{preparation__parameters_8h_a5236045a0e69a9c4c27ae2c1201fd7b7}{GRID\_WIDTH}});}
-\DoxyCodeLine{43                         \textcolor{keywordtype}{int} yj = \mbox{\hyperlink{preparation__parameters_8h_a96f1c9f2e658ba8f28c1834311a16ff0}{wrapValue}}(y + j, \mbox{\hyperlink{preparation__parameters_8h_a16338d8a959e91faa7277a8c2752fadb}{GRID\_HEIGHT}});}
-\DoxyCodeLine{44                         neighborSum += \mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}}[xi + yj * \mbox{\hyperlink{preparation__parameters_8h_a5236045a0e69a9c4c27ae2c1201fd7b7}{GRID\_WIDTH}}];}
-\DoxyCodeLine{45                     \}}
-\DoxyCodeLine{46 }
-\DoxyCodeLine{47                 \textcolor{keywordtype}{int} current = x + y * \mbox{\hyperlink{preparation__parameters_8h_a5236045a0e69a9c4c27ae2c1201fd7b7}{GRID\_WIDTH}};}
-\DoxyCodeLine{48                 neighborSum -\/= \mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}}[current];}
-\DoxyCodeLine{49                 \mbox{\hyperlink{preparation__parameters_8h_a4244bd3e578081e7c6d29a4ca8523990}{gridNext}}[current] = \mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}}[current];}
-\DoxyCodeLine{50                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}}[current] == 1 \&\& (neighborSum < 2 || neighborSum > 3))}
-\DoxyCodeLine{51                     \mbox{\hyperlink{preparation__parameters_8h_a4244bd3e578081e7c6d29a4ca8523990}{gridNext}}[current] = 0;}
-\DoxyCodeLine{52                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (neighborSum == 3)}
-\DoxyCodeLine{53                     \mbox{\hyperlink{preparation__parameters_8h_a4244bd3e578081e7c6d29a4ca8523990}{gridNext}}[current] = 1;}
-\DoxyCodeLine{54             \}}
-\DoxyCodeLine{55         \}}
-\DoxyCodeLine{56     \}}
-\DoxyCodeLine{57 }
-\DoxyCodeLine{58     \textcolor{comment}{// move gridNext to grid}}
-\DoxyCodeLine{59     \textcolor{keywordflow}{if} (\mbox{\hyperlink{preparation__parameters_8h_af55f7beec49af3268e5ed9aa85dc8d4f}{isPlaying}})}
-\DoxyCodeLine{60         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{preparation__parameters_8h_a2221fb3c6238a086563dc5c998454a0f}{N\_CELLS}}; i++)}
-\DoxyCodeLine{61             \mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}}[i] = \mbox{\hyperlink{preparation__parameters_8h_a4244bd3e578081e7c6d29a4ca8523990}{gridNext}}[i];}
-\DoxyCodeLine{62 }
-\DoxyCodeLine{63     \textcolor{comment}{// Additional info}}
-\DoxyCodeLine{64     window.draw(textSpeed);}
-\DoxyCodeLine{65     \textcolor{keywordflow}{if} (\mbox{\hyperlink{preparation__parameters_8h_af55f7beec49af3268e5ed9aa85dc8d4f}{isPlaying}})}
-\DoxyCodeLine{66         window.draw(textPause);}
-\DoxyCodeLine{67     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{68     \{}
-\DoxyCodeLine{69         window.draw(textPlay);}
-\DoxyCodeLine{70         window.draw(textToggle);}
-\DoxyCodeLine{71     \}}
-\DoxyCodeLine{72 }
-\DoxyCodeLine{73     window.display();}
-\DoxyCodeLine{74     sf::sleep(sf::milliseconds(\mbox{\hyperlink{preparation__parameters_8h_a6f1be1f780ff54ec75b41451cd4d90bd}{delay}}));}
-\DoxyCodeLine{75 }
-\DoxyCodeLine{76 \}}
-\DoxyCodeLine{77 }
-\DoxyCodeLine{78 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// DISPLAY\_GRID\_H}}
+\DoxyCodeLine{42                         \textcolor{keywordtype}{int} yj = \mbox{\hyperlink{preparation__parameters_8h_a96f1c9f2e658ba8f28c1834311a16ff0}{wrapValue}}(y + j, \mbox{\hyperlink{preparation__parameters_8h_a16338d8a959e91faa7277a8c2752fadb}{GRID\_HEIGHT}});}
+\DoxyCodeLine{43                         neighborSum += \mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}}[xi + yj * \mbox{\hyperlink{preparation__parameters_8h_a5236045a0e69a9c4c27ae2c1201fd7b7}{GRID\_WIDTH}}];}
+\DoxyCodeLine{44                     \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46                 \textcolor{keywordtype}{int} current = x + y * \mbox{\hyperlink{preparation__parameters_8h_a5236045a0e69a9c4c27ae2c1201fd7b7}{GRID\_WIDTH}};}
+\DoxyCodeLine{47                 neighborSum -\/= \mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}}[current];}
+\DoxyCodeLine{48                 \mbox{\hyperlink{preparation__parameters_8h_a4244bd3e578081e7c6d29a4ca8523990}{gridNext}}[current] = \mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}}[current];}
+\DoxyCodeLine{49                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}}[current] == 1 \&\& (neighborSum < 2 || neighborSum > 3))}
+\DoxyCodeLine{50                     \mbox{\hyperlink{preparation__parameters_8h_a4244bd3e578081e7c6d29a4ca8523990}{gridNext}}[current] = 0;}
+\DoxyCodeLine{51                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (neighborSum == 3)}
+\DoxyCodeLine{52                     \mbox{\hyperlink{preparation__parameters_8h_a4244bd3e578081e7c6d29a4ca8523990}{gridNext}}[current] = 1;}
+\DoxyCodeLine{53             \}}
+\DoxyCodeLine{54         \}}
+\DoxyCodeLine{55     \}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{comment}{// move gridNext to grid}}
+\DoxyCodeLine{58     \textcolor{keywordflow}{if} (\mbox{\hyperlink{preparation__parameters_8h_af55f7beec49af3268e5ed9aa85dc8d4f}{isPlaying}})}
+\DoxyCodeLine{59         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{preparation__parameters_8h_a2221fb3c6238a086563dc5c998454a0f}{N\_CELLS}}; i++)}
+\DoxyCodeLine{60             \mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}}[i] = \mbox{\hyperlink{preparation__parameters_8h_a4244bd3e578081e7c6d29a4ca8523990}{gridNext}}[i];}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     \textcolor{comment}{// Additional info}}
+\DoxyCodeLine{63     window.draw(textSpeed);}
+\DoxyCodeLine{64     \textcolor{keywordflow}{if} (\mbox{\hyperlink{preparation__parameters_8h_af55f7beec49af3268e5ed9aa85dc8d4f}{isPlaying}})}
+\DoxyCodeLine{65         window.draw(textPause);}
+\DoxyCodeLine{66     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{67     \{}
+\DoxyCodeLine{68         window.draw(textPlay);}
+\DoxyCodeLine{69         window.draw(textToggle);}
+\DoxyCodeLine{70     \}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     window.display();}
+\DoxyCodeLine{73     sf::sleep(sf::milliseconds(\mbox{\hyperlink{preparation__parameters_8h_a6f1be1f780ff54ec75b41451cd4d90bd}{delay}}));}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// DISPLAY\_GRID\_H}}
 
 \end{DoxyCode}
