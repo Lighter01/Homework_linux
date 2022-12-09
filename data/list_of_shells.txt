@@ -1,0 +1,15 @@
+Bourne shell,sh
+Almquist shell,ash
+Debian Almquist shell,dash
+Bash,bash
+KornShell,ksh
+Z shell,zsh
+C shell,csh
+TENEX C shell,tcsh
+Ch shell,ch
+Emacs shell,eshell
+Friendly interactive shell,fish
+PowerShell,pwsh
+rc shell,rc
+Stand-alone shell,sash
+Scheme Shell,scsh
