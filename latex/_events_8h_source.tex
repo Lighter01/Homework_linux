@@ -1,0 +1,53 @@
+\hypertarget{_events_8h_source}{}\doxysection{Events.\+h}
+\mbox{\hyperlink{_events_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef EVENTS\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define EVENTS\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{preparation__parameters_8h}{preparation\_parameters.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{display__grid_8h}{display\_grid.h}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{16 \textcolor{keywordtype}{void} \mbox{\hyperlink{_events_8h_a192c609e0c44e59c790bbe67c3208c22}{gameEvents}}(sf::RenderWindow\& window, sf::Event\& event,}
+\DoxyCodeLine{17                 \textcolor{keyword}{const} sf::Text\& textSpeed, \textcolor{keyword}{const} sf::Text\& textPause, \textcolor{keyword}{const} sf::Text\& textPlay, \textcolor{keyword}{const} sf::Text\& textToggle) \{}
+\DoxyCodeLine{18     \textcolor{keywordflow}{while} (window.pollEvent(event))}
+\DoxyCodeLine{19     \{}
+\DoxyCodeLine{20         \textcolor{keywordflow}{switch} (event.type)}
+\DoxyCodeLine{21         \{}
+\DoxyCodeLine{22         \textcolor{keywordflow}{case} sf::Event::Closed:}
+\DoxyCodeLine{23             window.close();}
+\DoxyCodeLine{24             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{25         \textcolor{keywordflow}{case} sf::Event::KeyPressed:}
+\DoxyCodeLine{26             \textcolor{keywordflow}{if} (event.key.code == sf::Keyboard::P)}
+\DoxyCodeLine{27                 \mbox{\hyperlink{preparation__parameters_8h_af55f7beec49af3268e5ed9aa85dc8d4f}{isPlaying}} = !\mbox{\hyperlink{preparation__parameters_8h_af55f7beec49af3268e5ed9aa85dc8d4f}{isPlaying}};}
+\DoxyCodeLine{28             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (event.key.code == sf::Keyboard::Right)}
+\DoxyCodeLine{29                 \mbox{\hyperlink{preparation__parameters_8h_a6f1be1f780ff54ec75b41451cd4d90bd}{delay}} = std::max(\mbox{\hyperlink{preparation__parameters_8h_a6f1be1f780ff54ec75b41451cd4d90bd}{delay}} -\/ \mbox{\hyperlink{preparation__parameters_8h_aa6af29f4d22f228995f73223f338ab48}{DELAY\_INC}}, 0); \textcolor{comment}{// 0 to prevent negative numbers}}
+\DoxyCodeLine{30             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (event.key.code == sf::Keyboard::Left)}
+\DoxyCodeLine{31                 \mbox{\hyperlink{preparation__parameters_8h_a6f1be1f780ff54ec75b41451cd4d90bd}{delay}} += \mbox{\hyperlink{preparation__parameters_8h_aa6af29f4d22f228995f73223f338ab48}{DELAY\_INC}};}
+\DoxyCodeLine{32             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (event.key.code == sf::Keyboard::Z)}
+\DoxyCodeLine{33             \{}
+\DoxyCodeLine{34                 \textcolor{keywordflow}{while} (sf::Keyboard::isKeyPressed(sf::Keyboard::Z))}
+\DoxyCodeLine{35                 \{}
+\DoxyCodeLine{36                     \textcolor{keywordflow}{if} (sf::Mouse::isButtonPressed(sf::Mouse::Left))}
+\DoxyCodeLine{37                     \{}
+\DoxyCodeLine{38                         \textcolor{keywordtype}{int} x = double(sf::Mouse::getPosition(window).x) / \mbox{\hyperlink{preparation__parameters_8h_a3d75a3045c57e393b76a1760deb2533c}{CELL\_SIZE}};}
+\DoxyCodeLine{39                         \textcolor{keywordtype}{int} y = double(sf::Mouse::getPosition(window).y) / \mbox{\hyperlink{preparation__parameters_8h_a3d75a3045c57e393b76a1760deb2533c}{CELL\_SIZE}};}
+\DoxyCodeLine{40                         \textcolor{keywordflow}{if} (x >= 0 \&\& x < GRID\_WIDTH \&\& y >= 0 \&\& y < \mbox{\hyperlink{preparation__parameters_8h_a16338d8a959e91faa7277a8c2752fadb}{GRID\_HEIGHT}})}
+\DoxyCodeLine{41                             \mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}}[x + y * \mbox{\hyperlink{preparation__parameters_8h_a5236045a0e69a9c4c27ae2c1201fd7b7}{GRID\_WIDTH}}] = 1;}
+\DoxyCodeLine{42                         \mbox{\hyperlink{display__grid_8h_a27f7f22ead830e5c5538ec7cbc429758}{displayGrid}}(window, textSpeed, textPause, textPlay, textToggle); \textcolor{comment}{// really slow}}
+\DoxyCodeLine{43                     \}}
+\DoxyCodeLine{44                 \}}
+\DoxyCodeLine{45             \}}
+\DoxyCodeLine{46             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{47         \textcolor{keywordflow}{case} sf::Event::MouseButtonPressed:}
+\DoxyCodeLine{48             \textcolor{keywordtype}{int} x = double(sf::Mouse::getPosition(window).x) / \mbox{\hyperlink{preparation__parameters_8h_a3d75a3045c57e393b76a1760deb2533c}{CELL\_SIZE}};}
+\DoxyCodeLine{49             \textcolor{keywordtype}{int} y = double(sf::Mouse::getPosition(window).y) / \mbox{\hyperlink{preparation__parameters_8h_a3d75a3045c57e393b76a1760deb2533c}{CELL\_SIZE}};}
+\DoxyCodeLine{50             \textcolor{keywordflow}{if} (x >= 0 \&\& x < GRID\_WIDTH \&\& y >= 0 \&\& y < \mbox{\hyperlink{preparation__parameters_8h_a16338d8a959e91faa7277a8c2752fadb}{GRID\_HEIGHT}})}
+\DoxyCodeLine{51                 \mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}}[x + y * \mbox{\hyperlink{preparation__parameters_8h_a5236045a0e69a9c4c27ae2c1201fd7b7}{GRID\_WIDTH}}] = !\mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}}[x + y * \mbox{\hyperlink{preparation__parameters_8h_a5236045a0e69a9c4c27ae2c1201fd7b7}{GRID\_WIDTH}}];}
+\DoxyCodeLine{52             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{53         \}}
+\DoxyCodeLine{54     \}}
+\DoxyCodeLine{55 \}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// EVENTS\_H}}
+
+\end{DoxyCode}

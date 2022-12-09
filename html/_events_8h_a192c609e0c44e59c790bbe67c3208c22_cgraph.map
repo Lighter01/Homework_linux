@@ -1,0 +1,6 @@
+<map id="gameEvents" name="gameEvents">
+<area shape="rect" id="node1" title="gameEvents &#45; функция, проверяющая наличие игровых событий и отвечающая за их вызов" alt="" coords="5,31,99,56"/>
+<area shape="rect" id="node2" href="$display__grid_8h.html#a27f7f22ead830e5c5538ec7cbc429758" title="displayGrid &#45; функция, создающая следующий кадр игровой сетки" alt="" coords="147,31,233,56"/>
+<area shape="rect" id="node3" href="$preparation__parameters_8h.html#aa57f1782524646624a3a26b76e0ad725" title="CELL_VECTOR &#45; вектор, представляющий собой одну игровую клетку" alt="" coords="281,5,396,31"/>
+<area shape="rect" id="node4" href="$preparation__parameters_8h.html#a96f1c9f2e658ba8f28c1834311a16ff0" title="wrapValue &#45; функция, проверяющая выход клетки за границу поля" alt="" coords="297,55,380,80"/>
+</map>

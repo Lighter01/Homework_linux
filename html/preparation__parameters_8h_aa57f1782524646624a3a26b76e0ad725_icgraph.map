@@ -1,0 +1,6 @@
+<map id="CELL_VECTOR" name="CELL_VECTOR">
+<area shape="rect" id="node1" title="CELL_VECTOR &#45; вектор, представляющий собой одну игровую клетку" alt="" coords="380,31,495,56"/>
+<area shape="rect" id="node2" href="$display__grid_8h.html#a27f7f22ead830e5c5538ec7cbc429758" title="displayGrid &#45; функция, создающая следующий кадр игровой сетки" alt="" coords="245,31,332,56"/>
+<area shape="rect" id="node3" href="$_events_8h.html#a192c609e0c44e59c790bbe67c3208c22" title="gameEvents &#45; функция, проверяющая наличие игровых событий и отвечающая за их вызов" alt="" coords="104,5,197,31"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main &#45; главная функция, вызывающая сам процесс игры" alt="" coords="5,31,56,56"/>
+</map>

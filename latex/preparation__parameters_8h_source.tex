@@ -1,0 +1,45 @@
+\hypertarget{preparation__parameters_8h_source}{}\doxysection{preparation\+\_\+parameters.\+h}
+\mbox{\hyperlink{preparation__parameters_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PREPARATION\_PARAMETERS\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PREPARATION\_PARAMETERS\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{14 \textcolor{keywordtype}{int} \mbox{\hyperlink{preparation__parameters_8h_a96f1c9f2e658ba8f28c1834311a16ff0}{wrapValue}}(\textcolor{keywordtype}{int} v, \textcolor{keywordtype}{int} vMax) \textcolor{comment}{// function for map cycling}}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16     \textcolor{keywordflow}{if} (v == -\/1) \textcolor{keywordflow}{return} vMax -\/ 1;}
+\DoxyCodeLine{17     \textcolor{keywordflow}{if} (v == vMax) \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{18     \textcolor{keywordflow}{return} v;}
+\DoxyCodeLine{19 \}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{22 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{preparation__parameters_8h_a3d75a3045c57e393b76a1760deb2533c}{CELL\_SIZE}} = 15;}
+\DoxyCodeLine{24 \textcolor{keyword}{const} sf::Vector2f \mbox{\hyperlink{preparation__parameters_8h_aa57f1782524646624a3a26b76e0ad725}{CELL\_VECTOR}}(\mbox{\hyperlink{preparation__parameters_8h_a3d75a3045c57e393b76a1760deb2533c}{CELL\_SIZE}}, \mbox{\hyperlink{preparation__parameters_8h_a3d75a3045c57e393b76a1760deb2533c}{CELL\_SIZE}});}
+\DoxyCodeLine{26 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{preparation__parameters_8h_a5236045a0e69a9c4c27ae2c1201fd7b7}{GRID\_WIDTH}} = 106;}
+\DoxyCodeLine{28 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{preparation__parameters_8h_a16338d8a959e91faa7277a8c2752fadb}{GRID\_HEIGHT}} = 60;}
+\DoxyCodeLine{30 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{preparation__parameters_8h_a2221fb3c6238a086563dc5c998454a0f}{N\_CELLS}} = \mbox{\hyperlink{preparation__parameters_8h_a5236045a0e69a9c4c27ae2c1201fd7b7}{GRID\_WIDTH}} * \mbox{\hyperlink{preparation__parameters_8h_a16338d8a959e91faa7277a8c2752fadb}{GRID\_HEIGHT}};}
+\DoxyCodeLine{32 \textcolor{keywordtype}{int} \mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}}[\mbox{\hyperlink{preparation__parameters_8h_a2221fb3c6238a086563dc5c998454a0f}{N\_CELLS}}] = \{  \};}
+\DoxyCodeLine{34 \textcolor{keywordtype}{int} \mbox{\hyperlink{preparation__parameters_8h_a4244bd3e578081e7c6d29a4ca8523990}{gridNext}}[\mbox{\hyperlink{preparation__parameters_8h_a2221fb3c6238a086563dc5c998454a0f}{N\_CELLS}}];}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{40 \textcolor{keywordtype}{void} \mbox{\hyperlink{preparation__parameters_8h_ad464ab32742db5e51bc98af35c1afcc8}{generateStartGrid}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}}[\mbox{\hyperlink{preparation__parameters_8h_a2221fb3c6238a086563dc5c998454a0f}{N\_CELLS}}])}
+\DoxyCodeLine{41 \{}
+\DoxyCodeLine{42     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{preparation__parameters_8h_a2221fb3c6238a086563dc5c998454a0f}{N\_CELLS}}; i++)}
+\DoxyCodeLine{43         \mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}}[i] = (\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(std::uniform\_int\_distribution<std::size\_t>(1, RAND\_MAX)(\mbox{\hyperlink{defines_8h_a4c76be29c5941a20bb27a6efcde1d6c6}{random\_device}}))/RAND\_MAX < 0.1) ? 1 : 0;}
+\DoxyCodeLine{44     \textcolor{comment}{//     grid[0 + 0 * GRID\_WIDTH] = 1;}}
+\DoxyCodeLine{45     \textcolor{comment}{//     grid[1 + 1 * GRID\_WIDTH] = 1;}}
+\DoxyCodeLine{46     \textcolor{comment}{//     grid[2 + 1 * GRID\_WIDTH] = 1;}}
+\DoxyCodeLine{47     \textcolor{comment}{//     grid[0 + 2 * GRID\_WIDTH] = 1;}}
+\DoxyCodeLine{48     \textcolor{comment}{//     grid[1 + 2 * GRID\_WIDTH] = 1;}}
+\DoxyCodeLine{49 \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{52 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{preparation__parameters_8h_aa6af29f4d22f228995f73223f338ab48}{DELAY\_INC}} = 50;}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{55 \textcolor{keywordtype}{int} \mbox{\hyperlink{preparation__parameters_8h_a6f1be1f780ff54ec75b41451cd4d90bd}{delay}} = 200;}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{58 \textcolor{keywordtype}{bool} \mbox{\hyperlink{preparation__parameters_8h_af55f7beec49af3268e5ed9aa85dc8d4f}{isPlaying}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// PREPARATION\_PARAMETERS\_H}}
+
+\end{DoxyCode}

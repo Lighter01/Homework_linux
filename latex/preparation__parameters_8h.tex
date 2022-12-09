@@ -1,0 +1,214 @@
+\hypertarget{preparation__parameters_8h}{}\doxysection{preparation\+\_\+parameters.\+h File Reference}
+\label{preparation__parameters_8h}\index{preparation\_parameters.h@{preparation\_parameters.h}}
+{\ttfamily \#include \char`\"{}defines.\+h\char`\"{}}\newline
+Include dependency graph for preparation\+\_\+parameters.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{preparation__parameters_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{preparation__parameters_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{preparation__parameters_8h_a96f1c9f2e658ba8f28c1834311a16ff0}{wrap\+Value}} (int v, int v\+Max)
+\begin{DoxyCompactList}\small\item\em wrap\+Value -\/ функция, проверяющая выход клетки за границу поля \end{DoxyCompactList}\item 
+const sf\+::\+Vector2f \mbox{\hyperlink{preparation__parameters_8h_aa57f1782524646624a3a26b76e0ad725}{CELL\+\_\+\+VECTOR}} (\mbox{\hyperlink{preparation__parameters_8h_a3d75a3045c57e393b76a1760deb2533c}{CELL\+\_\+\+SIZE}}, \mbox{\hyperlink{preparation__parameters_8h_a3d75a3045c57e393b76a1760deb2533c}{CELL\+\_\+\+SIZE}})
+\begin{DoxyCompactList}\small\item\em CELL\+\_\+\+VECTOR -\/ вектор, представляющий собой одну игровую клетку \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{preparation__parameters_8h_ad464ab32742db5e51bc98af35c1afcc8}{generate\+Start\+Grid}} (int \mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}}\mbox{[}\mbox{\hyperlink{preparation__parameters_8h_a2221fb3c6238a086563dc5c998454a0f}{N\+\_\+\+CELLS}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em generate\+Start\+Grid -\/ функция, генерирующая начальное состояние игрового поля \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{preparation__parameters_8h_a3d75a3045c57e393b76a1760deb2533c}{CELL\+\_\+\+SIZE}} = 15
+\begin{DoxyCompactList}\small\item\em CELL\+\_\+\+SIZE -\/ размер одной клетки \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{preparation__parameters_8h_a5236045a0e69a9c4c27ae2c1201fd7b7}{GRID\+\_\+\+WIDTH}} = 106
+\begin{DoxyCompactList}\small\item\em GRID\+\_\+\+WIDTH -\/ ширина сетки в клетках \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{preparation__parameters_8h_a16338d8a959e91faa7277a8c2752fadb}{GRID\+\_\+\+HEIGHT}} = 60
+\begin{DoxyCompactList}\small\item\em GRID\+\_\+\+HEIGHT -\/ высота сетки в клетках \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{preparation__parameters_8h_a2221fb3c6238a086563dc5c998454a0f}{N\+\_\+\+CELLS}} = \mbox{\hyperlink{preparation__parameters_8h_a5236045a0e69a9c4c27ae2c1201fd7b7}{GRID\+\_\+\+WIDTH}} $\ast$ \mbox{\hyperlink{preparation__parameters_8h_a16338d8a959e91faa7277a8c2752fadb}{GRID\+\_\+\+HEIGHT}}
+\begin{DoxyCompactList}\small\item\em N\+\_\+\+CELLS -\/ количество клеток в сетке \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}{grid}} \mbox{[}\mbox{\hyperlink{preparation__parameters_8h_a2221fb3c6238a086563dc5c998454a0f}{N\+\_\+\+CELLS}}\mbox{]} = \{ \}
+\begin{DoxyCompactList}\small\item\em grid -\/ массив живых клеток на поле \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{preparation__parameters_8h_a4244bd3e578081e7c6d29a4ca8523990}{grid\+Next}} \mbox{[}\mbox{\hyperlink{preparation__parameters_8h_a2221fb3c6238a086563dc5c998454a0f}{N\+\_\+\+CELLS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em grid\+Next -\/ массив клеток, которые должны быть живы на следующем шаге игры \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{preparation__parameters_8h_aa6af29f4d22f228995f73223f338ab48}{DELAY\+\_\+\+INC}} = 50
+\begin{DoxyCompactList}\small\item\em DELAY\+\_\+\+INC -\/ переменная, хранящая значение изменения задержки по нажатию на кнопки стрелочек вправо и влево \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{preparation__parameters_8h_a6f1be1f780ff54ec75b41451cd4d90bd}{delay}} = 200
+\begin{DoxyCompactList}\small\item\em delay -\/ переменная, хоанящая значение задержки \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{preparation__parameters_8h_af55f7beec49af3268e5ed9aa85dc8d4f}{is\+Playing}} = true
+\begin{DoxyCompactList}\small\item\em is\+Playing -\/ переменная, хранящая нынешнее состояние игрока \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{preparation__parameters_8h_aa57f1782524646624a3a26b76e0ad725}\label{preparation__parameters_8h_aa57f1782524646624a3a26b76e0ad725}} 
+\index{preparation\_parameters.h@{preparation\_parameters.h}!CELL\_VECTOR@{CELL\_VECTOR}}
+\index{CELL\_VECTOR@{CELL\_VECTOR}!preparation\_parameters.h@{preparation\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{CELL\_VECTOR()}{CELL\_VECTOR()}}
+{\footnotesize\ttfamily const sf\+::\+Vector2f CELL\+\_\+\+VECTOR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{preparation__parameters_8h_a3d75a3045c57e393b76a1760deb2533c}{CELL\+\_\+\+SIZE}}}]{,  }\item[{\mbox{\hyperlink{preparation__parameters_8h_a3d75a3045c57e393b76a1760deb2533c}{CELL\+\_\+\+SIZE}}}]{ }\end{DoxyParamCaption})}
+
+
+
+CELL\+\_\+\+VECTOR -\/ вектор, представляющий собой одну игровую клетку 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{preparation__parameters_8h_aa57f1782524646624a3a26b76e0ad725_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{preparation__parameters_8h_ad464ab32742db5e51bc98af35c1afcc8}\label{preparation__parameters_8h_ad464ab32742db5e51bc98af35c1afcc8}} 
+\index{preparation\_parameters.h@{preparation\_parameters.h}!generateStartGrid@{generateStartGrid}}
+\index{generateStartGrid@{generateStartGrid}!preparation\_parameters.h@{preparation\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{generateStartGrid()}{generateStartGrid()}}
+{\footnotesize\ttfamily void generate\+Start\+Grid (\begin{DoxyParamCaption}\item[{int}]{grid\mbox{[}\+N\+\_\+\+CELLS\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+generate\+Start\+Grid -\/ функция, генерирующая начальное состояние игрового поля 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & -\/ массив живых клеток на поле \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{preparation__parameters_8h_ad464ab32742db5e51bc98af35c1afcc8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{preparation__parameters_8h_a96f1c9f2e658ba8f28c1834311a16ff0}\label{preparation__parameters_8h_a96f1c9f2e658ba8f28c1834311a16ff0}} 
+\index{preparation\_parameters.h@{preparation\_parameters.h}!wrapValue@{wrapValue}}
+\index{wrapValue@{wrapValue}!preparation\_parameters.h@{preparation\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{wrapValue()}{wrapValue()}}
+{\footnotesize\ttfamily int wrap\+Value (\begin{DoxyParamCaption}\item[{int}]{v,  }\item[{int}]{v\+Max }\end{DoxyParamCaption})}
+
+
+
+wrap\+Value -\/ функция, проверяющая выход клетки за границу поля 
+
+Закольцовывает игровое поле во время перемещения клеток. 
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ координата клетки (по одной из координат) \\
+\hline
+{\em v\+Max} & -\/ граничное положение, возможное на поле (по одной из координат) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+обновленное значение координаты, если клетка вышла за пределы игрового поля, иначе возвращает значение без изменений 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{preparation__parameters_8h_a96f1c9f2e658ba8f28c1834311a16ff0_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{preparation__parameters_8h_a3d75a3045c57e393b76a1760deb2533c}\label{preparation__parameters_8h_a3d75a3045c57e393b76a1760deb2533c}} 
+\index{preparation\_parameters.h@{preparation\_parameters.h}!CELL\_SIZE@{CELL\_SIZE}}
+\index{CELL\_SIZE@{CELL\_SIZE}!preparation\_parameters.h@{preparation\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{CELL\_SIZE}{CELL\_SIZE}}
+{\footnotesize\ttfamily const int CELL\+\_\+\+SIZE = 15}
+
+
+
+CELL\+\_\+\+SIZE -\/ размер одной клетки 
+
+\mbox{\Hypertarget{preparation__parameters_8h_a6f1be1f780ff54ec75b41451cd4d90bd}\label{preparation__parameters_8h_a6f1be1f780ff54ec75b41451cd4d90bd}} 
+\index{preparation\_parameters.h@{preparation\_parameters.h}!delay@{delay}}
+\index{delay@{delay}!preparation\_parameters.h@{preparation\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{delay}{delay}}
+{\footnotesize\ttfamily int delay = 200}
+
+
+
+delay -\/ переменная, хоанящая значение задержки 
+
+\mbox{\Hypertarget{preparation__parameters_8h_aa6af29f4d22f228995f73223f338ab48}\label{preparation__parameters_8h_aa6af29f4d22f228995f73223f338ab48}} 
+\index{preparation\_parameters.h@{preparation\_parameters.h}!DELAY\_INC@{DELAY\_INC}}
+\index{DELAY\_INC@{DELAY\_INC}!preparation\_parameters.h@{preparation\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{DELAY\_INC}{DELAY\_INC}}
+{\footnotesize\ttfamily const int DELAY\+\_\+\+INC = 50}
+
+
+
+DELAY\+\_\+\+INC -\/ переменная, хранящая значение изменения задержки по нажатию на кнопки стрелочек вправо и влево 
+
+\mbox{\Hypertarget{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}\label{preparation__parameters_8h_a4619cf7b2b5f4225f1da09a5ba9a192f}} 
+\index{preparation\_parameters.h@{preparation\_parameters.h}!grid@{grid}}
+\index{grid@{grid}!preparation\_parameters.h@{preparation\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{grid}{grid}}
+{\footnotesize\ttfamily int grid\mbox{[}\mbox{\hyperlink{preparation__parameters_8h_a2221fb3c6238a086563dc5c998454a0f}{N\+\_\+\+CELLS}}\mbox{]} = \{ \}}
+
+
+
+grid -\/ массив живых клеток на поле 
+
+\mbox{\Hypertarget{preparation__parameters_8h_a16338d8a959e91faa7277a8c2752fadb}\label{preparation__parameters_8h_a16338d8a959e91faa7277a8c2752fadb}} 
+\index{preparation\_parameters.h@{preparation\_parameters.h}!GRID\_HEIGHT@{GRID\_HEIGHT}}
+\index{GRID\_HEIGHT@{GRID\_HEIGHT}!preparation\_parameters.h@{preparation\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{GRID\_HEIGHT}{GRID\_HEIGHT}}
+{\footnotesize\ttfamily const int GRID\+\_\+\+HEIGHT = 60}
+
+
+
+GRID\+\_\+\+HEIGHT -\/ высота сетки в клетках 
+
+\mbox{\Hypertarget{preparation__parameters_8h_a5236045a0e69a9c4c27ae2c1201fd7b7}\label{preparation__parameters_8h_a5236045a0e69a9c4c27ae2c1201fd7b7}} 
+\index{preparation\_parameters.h@{preparation\_parameters.h}!GRID\_WIDTH@{GRID\_WIDTH}}
+\index{GRID\_WIDTH@{GRID\_WIDTH}!preparation\_parameters.h@{preparation\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{GRID\_WIDTH}{GRID\_WIDTH}}
+{\footnotesize\ttfamily const int GRID\+\_\+\+WIDTH = 106}
+
+
+
+GRID\+\_\+\+WIDTH -\/ ширина сетки в клетках 
+
+\mbox{\Hypertarget{preparation__parameters_8h_a4244bd3e578081e7c6d29a4ca8523990}\label{preparation__parameters_8h_a4244bd3e578081e7c6d29a4ca8523990}} 
+\index{preparation\_parameters.h@{preparation\_parameters.h}!gridNext@{gridNext}}
+\index{gridNext@{gridNext}!preparation\_parameters.h@{preparation\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{gridNext}{gridNext}}
+{\footnotesize\ttfamily int grid\+Next\mbox{[}\mbox{\hyperlink{preparation__parameters_8h_a2221fb3c6238a086563dc5c998454a0f}{N\+\_\+\+CELLS}}\mbox{]}}
+
+
+
+grid\+Next -\/ массив клеток, которые должны быть живы на следующем шаге игры 
+
+\mbox{\Hypertarget{preparation__parameters_8h_af55f7beec49af3268e5ed9aa85dc8d4f}\label{preparation__parameters_8h_af55f7beec49af3268e5ed9aa85dc8d4f}} 
+\index{preparation\_parameters.h@{preparation\_parameters.h}!isPlaying@{isPlaying}}
+\index{isPlaying@{isPlaying}!preparation\_parameters.h@{preparation\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{isPlaying}{isPlaying}}
+{\footnotesize\ttfamily bool is\+Playing = true}
+
+
+
+is\+Playing -\/ переменная, хранящая нынешнее состояние игрока 
+
+\mbox{\Hypertarget{preparation__parameters_8h_a2221fb3c6238a086563dc5c998454a0f}\label{preparation__parameters_8h_a2221fb3c6238a086563dc5c998454a0f}} 
+\index{preparation\_parameters.h@{preparation\_parameters.h}!N\_CELLS@{N\_CELLS}}
+\index{N\_CELLS@{N\_CELLS}!preparation\_parameters.h@{preparation\_parameters.h}}
+\doxysubsubsection{\texorpdfstring{N\_CELLS}{N\_CELLS}}
+{\footnotesize\ttfamily const int N\+\_\+\+CELLS = \mbox{\hyperlink{preparation__parameters_8h_a5236045a0e69a9c4c27ae2c1201fd7b7}{GRID\+\_\+\+WIDTH}} $\ast$ \mbox{\hyperlink{preparation__parameters_8h_a16338d8a959e91faa7277a8c2752fadb}{GRID\+\_\+\+HEIGHT}}}
+
+
+
+N\+\_\+\+CELLS -\/ количество клеток в сетке 
+
